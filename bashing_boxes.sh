@@ -9,8 +9,8 @@ good to meet you!
 some_variable=("list" "of" "items")
 
 echo $some_variable
-echo ${some_variable[@]}
-echo ${some_variable[0]}
+echo ${soccer[@]}
+echo ${basketball[0]}
 echo ${some_variable[2]}
 echo ${some_variable[1]}
 
@@ -21,3 +21,7 @@ run command-> wsl --install
 
 #if you close the terminal or need to open it again Open PowerShell and run the command-> wsl -d ubuntu
 #it should open up again for you.
+
+#!/bin/bash
+box=("soccer" "basketball
+
