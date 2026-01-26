@@ -5,8 +5,9 @@ intro(){
     echo "we are playing Rock Paper Scissors"
     read -p "Start game?:" start
     echo "starting game.." 
-    
-}
+
+} 
+#intro finished
 player_choice_moves(){
 local rock="one"
 local paper="two"
@@ -15,6 +16,24 @@ local moves= $rock $paper $scissors
     read -p "choose a move:" $moves then 
     if [[$moves=rock]]
     echo "you chose: rock"
+#trying alternative choice selection based code
 }
 intro
 player_choice_moves
+1) 
+   rock
+   echo "you chose: rock"
+   ;;
+2)
+   paper
+   echo "you chose: paper"
+   ;;
+3) 
+   scissors
+   echo "you chose: scissors"
+   ;;
+*) 
+   read -p "your move:" $move
+   echo "turn made"
+   esac
+   }
