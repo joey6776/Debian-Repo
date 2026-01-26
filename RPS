@@ -1,0 +1,20 @@
+#function creation
+#!/bin/bash
+intro(){ 
+    start="y"
+    echo "we are playing Rock Paper Scissors"
+    read -p "Start game?:" start
+    echo "starting game.." 
+    
+}
+player_choice_moves(){
+local rock="one"
+local paper="two"
+local scissors="three"
+local moves= $rock $paper $scissors
+    read -p "choose a move:" $moves then 
+    if [[$moves=rock]]
+    echo "you chose: rock"
+}
+intro
+player_choice_moves
