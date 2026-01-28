@@ -93,3 +93,45 @@ comp_choice_game(){
     ;;
     esac
     }
+#i made the game successfully loop and the computer choose a move
+    comp_choice_game(){
+        RANDNUM=$((RANDOM % 3 + 1))
+        case $RANDNUM in
+    1)
+    { if [[ $player_choice_move -eq 2 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 3 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq $comp_choice_game ]] then echo "TIE"
+    fi
+    }
+    ;;
+    
+    2)
+    { if [[ $player_choice_move -eq 3 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 1 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq  $comp_choice_game ]] then echo "TIE"
+    fi
+    }
+    ;;
+    
+    3)
+    { if [[ $player_choice_move -eq 2 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 1 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq $comp_choice_game ]] then echo "TIE"
+    fi
+    }
+    ;;
+    *) 
+    echo "invalid move"
+    ;;
+    esac
+    }
+    {
+        while true; do
+    intro
+    player_choice_move
+    comp_choice_game
+    
+    done
+    }
+
+
