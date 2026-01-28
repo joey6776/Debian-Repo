@@ -60,3 +60,36 @@ read -p "ur move:" choice
        ;;
     esac
     }
+#case for computer
+comp_choice_game(){
+        RANDNUM=$((RANDOM % 3 + 1))
+        case $RANDNUM in
+#picks random number from 1-3
+1)
+    { if [[ $player_choice_move -eq 2 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 3 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq 1 ]] then echo "TIE"
+    fi
+    }
+    ;;
+    
+    2)
+    { if [[ $player_choice_move -eq 3 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 1 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq 2 ]] then echo "TIE"
+    fi
+    }
+    ;;
+    
+    3)
+    { if [[ $player_choice_move -eq 2 ]] then echo "U win"
+    elif [[ $player_choice_move -eq 1 ]] then echo "comp won"
+    elif [[ $player_choice_move -eq 3 ]] then echo "TIE"
+    fi
+    }
+    ;;
+    *) 
+    echo "invalid move"
+    ;;
+    esac
+    }
