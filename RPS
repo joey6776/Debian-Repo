@@ -37,3 +37,26 @@ player_choice_moves
    echo "turn made"
    esac
    }
+#i redid my coding method
+player_choice_move(){
+echo "==CHOOSE UR MOVE=="
+echo "1) ROCK"
+echo "2) PAPER"
+echo "3) SCISSORS"
+read -p "ur move:" choice
+      case $choice in
+#made a case statement for the player
+    1)
+    echo "you chose: ROCK "
+       ;;
+    2)
+    echo "you chose: PAPER"
+       ;;
+    3)
+    echo "you chose: SCISSORS"
+       ;;
+    *)
+    echo "invalid choice"
+       ;;
+    esac
+    }
