@@ -211,5 +211,43 @@ read -p "ur move:" choice
     game_system
     exit 1
     }
+#revised intro
+intro(){
+    yn=$((2+1))
+    echo "we are playing Rock Paper Scissors"
+    read -p "Start game? (y=1 n=2):" yn
+    case $yn in
+    1)
+    echo ""
+    ;;
+    2)
+    echo "okay then"
+    exit 0
+    ;;
+    *)
+    echo "invalid"
+    exit 0
+    ;;
+    esac
+    echo "game started"
+    }
+#revised if statement
+ game_system(){
+    if [[ $RANDNUM -eq $choice ]] then echo "(TIE)"
+    elif [[ $RANDNUM -eq 1 && $choice -eq 2
+    ||\ $RANDNUM -eq 2 && $choice -eq 3
+    ||\ $RANDNUM -eq 3 && $choice -eq 1 ]] then echo "u won"
+    else echo "comp won"
+    fi
+    }
+    {
+    while true; do
+    intro
+    player_choice
+    comp_choice
+    game_system
+    
+    done
+    }
 
 
